@@ -31,7 +31,7 @@ public class StackOfObject {
 
 
     private void resize(int max) {
-        Object[] temp = (Object[]) new Object[max];
+        Object[] temp = new Object[max];
         for (int i = 0; i < N; i++) {
             temp[i] = a[i];
             a = temp;
