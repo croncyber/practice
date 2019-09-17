@@ -20,3 +20,5 @@ target/
 /out/
 /out.log
 /out.log.*
+*.log
+/logs/

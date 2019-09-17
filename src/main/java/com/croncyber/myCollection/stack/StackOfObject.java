@@ -1,4 +1,4 @@
-package myCollection.stack;
+package main.java.com.croncyber.myCollection.stack;
 
 public class StackOfObject {
     private Object[] a;  // stack element
