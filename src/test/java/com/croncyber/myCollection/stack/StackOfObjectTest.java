@@ -1,4 +1,4 @@
-package test;
+package com.croncyber.myCollection.stack;
 
 import org.junit.Test;
 
