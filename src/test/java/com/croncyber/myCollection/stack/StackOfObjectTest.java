@@ -1,35 +1,44 @@
 package com.croncyber.myCollection.stack;
 
+import org.junit.Before;
 import org.junit.Test;
-import static org.hamcrest.CoreMatchers.is;
+
 import static org.junit.Assert.*;
 
+
 public class StackOfObjectTest {
-    private Object[] a;  // stack element
-    private int N;
+
+    private StackOfObject stackOfObject;
+
+    @Before
+    public  void newStack() {
+         stackOfObject = new StackOfObject(1);
+    }
+
+
     @Test
-    public void isEmptyNotEmpty(){
-        StackOfObject stackOfObject = new StackOfObject(1);
+    public void isEmptyNotEmpty() {
         stackOfObject.push("@");
         assertFalse(stackOfObject.isEmpty());
     }
 
     @Test
-    public void isEmpty(){
-        StackOfObject stackOfObject = new StackOfObject(1);
+    public void isEmpty() {
         assertTrue(stackOfObject.isEmpty());
     }
 
 
-    @Test
-    public void size() {
-    }
-
-    @Test
+    @Test(expected = ArrayStoreException.class)
     public void push() {
+        stackOfObject.push(1);
+
     }
 
-    @Test
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void pop() {
+        stackOfObject.pop();
     }
+
+
 }
