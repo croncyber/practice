@@ -11,8 +11,8 @@ public class StackOfObjectTest {
     private StackOfObject stackOfObject;
 
     @Before
-    public  void newStack() {
-         stackOfObject = new StackOfObject(1);
+    public void newStack() {
+        stackOfObject = new StackOfObject(1);
     }
 
 
@@ -28,10 +28,9 @@ public class StackOfObjectTest {
     }
 
 
-    @Test(expected = ArrayStoreException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void push() {
-        stackOfObject.push(1);
-
+        stackOfObject.push(null);
     }
 
 
@@ -39,6 +38,5 @@ public class StackOfObjectTest {
     public void pop() {
         stackOfObject.pop();
     }
-
 
 }
