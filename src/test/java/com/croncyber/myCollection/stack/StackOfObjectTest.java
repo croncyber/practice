@@ -10,12 +10,14 @@ import static org.junit.Assert.assertTrue;
 
 
 
-@DisplayName("Testing stack functional")
+
 public class StackOfObjectTest {
 
     private StackOfObject stackOfObject;
     public Object a;
 
+
+    @DisplayName("Testing stack functional")
     @Before
     public void newStack() {
         stackOfObject = new StackOfObject(10);
