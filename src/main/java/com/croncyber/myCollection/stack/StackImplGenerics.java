@@ -1,9 +1,14 @@
 package com.croncyber.myCollection.stack;
 
-public class StackImplGenerics<Item> {
-    private Item[] a;
+
+public class StackImplGenerics<T> {
+    private T[] a;
     private int N;
 
+    public StackImplGenerics() {
+        a = (T[]) new Object[2];
+        N = 0;
+    }
 
     public boolean isEmpty() {
         return N == 0;
@@ -13,7 +18,6 @@ public class StackImplGenerics<Item> {
     public int size() {
         return N;
     }
-
 
 
     public void push(T item) {
@@ -34,13 +38,9 @@ public class StackImplGenerics<Item> {
     }
 
     private void resize(int max) {
-        T[] temp;
-        temp = T
-        for (int i = 0; i < N; i++) {
-            temp[i] = a[i];
-            a = temp;
-        }
+        assert max >= N;
+        T[] temp = (T[]) new Object[max];
+        if (N >= 0) System.arraycopy(a, 0, temp, 0, N);
+        a = temp;
     }
-
-
 }
